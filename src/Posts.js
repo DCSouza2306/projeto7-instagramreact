@@ -3,15 +3,26 @@ import React from "react"
 
 
 export default function Posts() {
-    const [usuarioClicado, setUsuario] = React.useState('');
 
-    const listaUsuarios = []
 
     function Post(props) {
-        function foiClicado(user) {
-            const novoUsuario = true;
-            setUsuario(novoUsuario);
+        const [salvarClicado, setSalvar] = React.useState('');
+        const [curtidaClicado, setCurtida] = React.useState(false);
 
+        function clicarSalvar() {
+            const novoUsuario = true;
+            setSalvar(novoUsuario);
+        }
+
+        function clicarCurtida() {
+            const novaCurtida = true;
+            setCurtida(novaCurtida);
+
+        }
+
+        function desclicarCurtida(){
+            const novaCurtida = false;
+            setCurtida(novaCurtida);
         }
         return (
             <div class="post">
@@ -26,15 +37,19 @@ export default function Posts() {
                 <div class="barra-inferior">
                     <div class="barra-icones">
                         <div class="barra-icones-esquerdo">
-                            <ion-icon name="heart-outline"></ion-icon>
+                            <ion-icon
+                                className = {(curtidaClicado)? 'curtido':''}
+                                onClick={(curtidaClicado)? desclicarCurtida:clicarCurtida}
+                                name={(curtidaClicado) ? 'heart' : 'heart-outline'}
+                            ></ion-icon>
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
                         </div>
-                        <ion-icon onClick={foiClicado} name={(usuarioClicado)?'bookmark':'bookmark-outline'}></ion-icon>
+                        <ion-icon onClick={clicarSalvar} name={(salvarClicado) ? 'bookmark' : 'bookmark-outline'}></ion-icon>
                     </div>
                     <div class="barra-curtidas">
                         <img src={props.curtida} alt={`icone de ${props.nomeUsuario}`} />
-                        <p>Curtido por <strong>{props.usuarioCurtida}</strong> e outras {props.numeroCurtidas} pessoas</p>
+                        <p>Curtido por <strong>{props.usuarioCurtida}</strong> e outras {(curtidaClicado)? `${(props.numeroCurtidas+1).toLocaleString('pt-BR')}` : `${(props.numeroCurtidas).toLocaleString('pt-BR')}`} pessoas</p>
                     </div>
                 </div>
             </div>
@@ -49,7 +64,7 @@ export default function Posts() {
             imagemPost: './imagens/gato-telefone 1.png',
             iconeCurtida: './imagens/respondeai 1.png',
             usuarioCurtida: 'respondeai',
-            numeroCurtidas: '101.523'
+            numeroCurtidas: 101523
         },
         {
             id: '2',
@@ -58,7 +73,7 @@ export default function Posts() {
             imagemPost: './imagens/dog 1.png',
             iconeCurtida: './imagens/9gag 1.png',
             usuarioCurtida: '9gag',
-            numeroCurtidas: '99.159'
+            numeroCurtidas: 99159
         },
         {
             id: '3',
@@ -67,7 +82,7 @@ export default function Posts() {
             imagemPost: './imagens/gato-telefone 1.png',
             iconeCurtida: './imagens/respondeai 1.png',
             usuarioCurtida: 'respondeai',
-            numeroCurtidas: '101.523'
+            numeroCurtidas: 101523
         }
 
     ]
