@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FAFAFA;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+.container {
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: space-between;
+    margin: 88px auto 0 auto;
+    width: 935px;
+}
+
+.container-principal{
+    background-color: #FAFAFA;
+    width: 635px;
+}
+
+

@@ -1,0 +1,79 @@
+.caixa-posts {
+    background-color: #FAFAFA;
+    margin-top: 24px;
+}
+
+.post{
+    background-color: #FFFFFF;
+    width: 614px;
+    height: 100%;
+    border: #DBDBDB 1px solid;
+    margin-bottom: 60px;
+}
+
+
+.barra-topo{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barra-topo ion-icon{
+    margin-right: 15px;
+}
+
+.usuario-icone{
+    display: flex;
+    margin-left: 15px;
+}
+
+.usuario-icone img{
+    width: 32px;
+    height: 32px;
+}
+
+.usuario-icone p{
+    color: #262626;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.barra-inferior{
+    height: 77px;
+
+}
+
+.barra-icones{
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra-icones ion-icon{
+    font-size: 22px;
+    margin: 5px 10px;
+}
+
+.barra-icones ion-icon:nth-child(2), .barra-icones ion-icon:nth-child(3){
+    margin-left: 0px;
+}
+
+.barra-curtidas{
+    margin: 0 10px;
+    display: flex;
+}
+
+.barra-curtidas img{
+    width: 22px;
+    height: 22px;
+}
+
+.barra-curtidas p{
+    font-size: 14px;
+    margin-left: 5px;
+    padding-top: 5px;
+}

@@ -1,0 +1,105 @@
+.sidebar{
+    height: 200px;
+    width: 293px;
+    position: fixed;
+    right: calc(100vw - 85vw);
+}
+
+.usuario{
+    margin-top: 25px;
+    display: flex;
+}
+
+.usuario img{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
+
+.usuario img:hover{
+    cursor: pointer;
+}
+
+.nome-usuario{
+    margin-left: 15px;
+    padding-top: 10px;
+
+}
+
+.nome-usuario ion-icon:hover{
+    cursor: pointer;
+}
+
+.nome-usuario p{
+    font-size: 14px;
+}
+
+.nome-usuario p:nth-child(1){
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #262626;
+}
+
+.nome-usuario p:nth-child(2){
+    color: #8E8E8E;
+}
+
+.sugestoes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+}
+
+.sugestoes p{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sugestoes p:nth-child(1){
+    color: #8e8e8e;
+}
+
+.sugestoes p:nth-child(2){
+    color: #262626;
+}
+
+.caixa-sugestoes{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
+
+.caixa-sugestoes-usuario{
+    display: flex;
+}
+
+.caixa-sugestoes p{
+    font-size: 12px;
+    font-weight: 500;
+    color: #139EF2;
+}
+
+.caixa-sugestao-nome{
+    margin-left: 10px;
+}
+
+.caixa-sugestao-nome p:nth-child(1){
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #262626;
+}
+
+.caixa-sugestao-nome p:nth-child(2){
+    font-size: 12px;
+    font-weight: 300;
+    color:#8E8E8E
+}
+
+.sobre{
+    font-size: 11px;
+    color: #c7c7c7;
+    font-weight: 400;
+    margin-top: 40px;
+}

@@ -1,0 +1,94 @@
+@media(max-width:935px) {
+    .sidebar {
+        display: none;
+    }
+
+    .caixa-topo{
+        display: none;
+    }
+
+    .caixa-topo-responsivo {
+        background-color: #FFFFFF;
+        height: 54px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        position: fixed;
+        right: 0;
+        top:0;
+        padding: 0 30px;
+        border-bottom: #DBDBDB 1px solid;
+
+    }
+
+    .caixa-topo-responsivo ion-icon{
+        font-size: 22px;
+    }
+
+
+    .container {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width:635px){
+    .caixa-topo-mobile{
+        background-color: #FFFFFF;
+        height: 54px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1;
+        position: fixed;
+        right: 0;
+        top:0;
+        padding: 0 30px;
+        border-bottom: #DBDBDB 1px solid;
+    }
+
+    .caixa-topo-responsivo{
+        display: none;
+    }
+
+    .caixa-topo{
+        display: none;
+    }
+
+    .caixa-topo-mobile ion-icon{
+        font-size: 22px;
+    }
+
+    .container{
+        width: 100%;
+        margin-top: 54px;
+    }
+    .container-principal{
+        width: 100%;
+    }
+
+    .caixa-storie{
+        border: none;
+        background-color: #FAFAFA;
+        width: 100%;
+    }
+
+    .post{
+        width: 100%;
+    }
+
+    .caixa-posts{
+        margin-top: 0;
+    }
+
+    .caixa-storie ion-icon{
+        display: none;
+    }
+
+    .imagem-post{
+        width: 100%;
+    }
+}
