@@ -1,4 +1,4 @@
-export default function Topo() {
+export default function NavBar() {
     return (
         <div class="caixa-topo">
             <div class="caixa-topo-conteudo">

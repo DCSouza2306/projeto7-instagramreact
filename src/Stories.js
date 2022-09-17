@@ -1,17 +1,5 @@
-function Storie(props) {
-    return (
-        <li class="storie">
-            <div class="borda">
-                <div class="foto">
-                    <img src={props.link} alt={`logo de ${props.nome}`}/>
-                </div>
-            </div>
-            <p>{props.nome}</p>
-        </li>
-    )
-}
-
 export default function Stories() {
+
     const listaStories = [
         { nome: '9gag', link: '/imagens/9gag 1.png' },
         { nome: 'meowed', link: '/imagens/meowed 1.png'},
@@ -22,6 +10,18 @@ export default function Stories() {
         { nome: 'filomoderna', link: './imagens/filomoderna 1.png'},
         { nome: 'memeriago.', link: './imagens/memeriagourmet 1.png'},
     ]
+    function Storie(props) {
+        return (
+            <li class="storie">
+                <div class="borda">
+                    <div class="foto">
+                        <img src={props.link} alt={`logo de ${props.nome}`}/>
+                    </div>
+                </div>
+                <p>{props.nome}</p>
+            </li>
+        )
+    }
 
     return (
         <ul class="caixa-storie">

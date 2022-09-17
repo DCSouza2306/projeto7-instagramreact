@@ -1,19 +1,3 @@
-function Sugestao(props) {
-    return (
-        <div class="caixa-sugestoes">
-            <div class="caixa-sugestoes-usuario">
-                <img src={props.link} />
-
-                <div class="caixa-sugestao-nome">
-                    <p>{props.usuario}</p>
-                    <p>{props.seguidor}</p>
-                </div>
-            </div>
-            <p>Seguir</p>
-        </div>
-    )
-}
-
 export default function Sugestoes() {
     const listaSugestoes = [
         { link: './imagens/badvibesmemes 1.png', usuario: 'bad.vibes.memes', seguidor: 'Segue Você' },
@@ -22,6 +6,22 @@ export default function Sugestoes() {
         { link: './imagens/adorableanimals 1.png', usuario: 'adorable_animals', seguidor: 'Segue Você' },
         { link: './imagens/smallcutecats 1.png', usuario: 'smallcutecats', seguidor: 'Segue Você' }
     ]
+
+    function Sugestao(props) {
+        return (
+            <div class="caixa-sugestoes">
+                <div class="caixa-sugestoes-usuario">
+                    <img src={props.link} />
+
+                    <div class="caixa-sugestao-nome">
+                        <p>{props.usuario}</p>
+                        <p>{props.seguidor}</p>
+                    </div>
+                </div>
+                <p>Seguir</p>
+            </div>
+        )
+    }
 
     return (
         <>

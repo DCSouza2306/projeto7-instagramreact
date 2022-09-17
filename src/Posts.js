@@ -1,16 +1,16 @@
 import React from "react"
 
-
-
 export default function Posts() {
-
-
     function Post(props) {
-        const [salvarClicado, setSalvar] = React.useState('');
+        const [salvarClicado, setSalvar] = React.useState(false);
         const [curtidaClicado, setCurtida] = React.useState(false);
 
         function clicarSalvar() {
             const novoUsuario = true;
+            setSalvar(novoUsuario);
+        }
+        function desclicarSalvar() {
+            const novoUsuario = false;
             setSalvar(novoUsuario);
         }
 
@@ -19,11 +19,12 @@ export default function Posts() {
             setCurtida(novaCurtida);
 
         }
-
-        function desclicarCurtida(){
+        function desclicarCurtida() {
             const novaCurtida = false;
             setCurtida(novaCurtida);
+    
         }
+
         return (
             <div class="post">
                 <div class="barra-topo">
@@ -38,18 +39,21 @@ export default function Posts() {
                     <div class="barra-icones">
                         <div class="barra-icones-esquerdo">
                             <ion-icon
-                                className = {(curtidaClicado)? 'curtido':''}
-                                onClick={(curtidaClicado)? desclicarCurtida:clicarCurtida}
+                                id={(curtidaClicado)? 'curtido':''}
+                                onClick={(curtidaClicado) ? desclicarCurtida : clicarCurtida}
                                 name={(curtidaClicado) ? 'heart' : 'heart-outline'}
                             ></ion-icon>
                             <ion-icon name="chatbubble-outline"></ion-icon>
                             <ion-icon name="paper-plane-outline"></ion-icon>
                         </div>
-                        <ion-icon onClick={clicarSalvar} name={(salvarClicado) ? 'bookmark' : 'bookmark-outline'}></ion-icon>
+                        <ion-icon
+                            onClick={(salvarClicado)? desclicarSalvar : clicarSalvar}
+                            name={(salvarClicado) ? 'bookmark' : 'bookmark-outline'}
+                        ></ion-icon>
                     </div>
                     <div class="barra-curtidas">
                         <img src={props.curtida} alt={`icone de ${props.nomeUsuario}`} />
-                        <p>Curtido por <strong>{props.usuarioCurtida}</strong> e outras {(curtidaClicado)? `${(props.numeroCurtidas+1).toLocaleString('pt-BR')}` : `${(props.numeroCurtidas).toLocaleString('pt-BR')}`} pessoas</p>
+                        <p>Curtido por <strong>{props.usuarioCurtida}</strong> e outras {(curtidaClicado) ? `${(props.numeroCurtidas + 1).toLocaleString('pt-BR')}` : `${(props.numeroCurtidas).toLocaleString('pt-BR')}`} pessoas</p>
                     </div>
                 </div>
             </div>

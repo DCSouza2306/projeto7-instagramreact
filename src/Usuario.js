@@ -14,14 +14,20 @@ export default function Usuario() {
         setFoto(novaFoto);
     }
 
-    return (
-        <div class="usuario">
-            <img onClick={alterarFoto} src={foto} alt={`Icone do usuario ${usuario}`}/>
+    function User(props){
+        return (
+            <div class="usuario">
+            <img onClick={alterarFoto} src={props.foto} alt={`Icone do usuario ${props.user}`}/>
             <div class="nome-usuario">
                 <p>catanacomics</p>
-                <p>{usuario} <ion-icon onClick={alterarUsuario}name="pencil-outline"></ion-icon></p>
-                
+                <p>{props.user} <ion-icon onClick={alterarUsuario}name="pencil-outline"></ion-icon></p>
             </div>
         </div>
+        )
+
+    }
+
+    return (
+        <User user={usuario} foto={foto} />
     )
 }
